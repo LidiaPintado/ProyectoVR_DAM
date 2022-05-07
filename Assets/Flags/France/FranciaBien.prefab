@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: 0.097, y: -0.009, z: -0.198}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7048331808183903856}
   m_RootOrder: 0
@@ -120,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f22a595ed5608a048baf286d5ed38de0,
         type: 3}
       propertyPath: m_Name
-      value: FranceFlag
+      value: FranciaBien
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f22a595ed5608a048baf286d5ed38de0,
         type: 3}
@@ -140,12 +141,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4530638306508414405}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7048331808183903856 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2364183205624054859, guid: f22a595ed5608a048baf286d5ed38de0,
-    type: 3}
-  m_PrefabInstance: {fileID: 4530638306508414405}
-  m_PrefabAsset: {fileID: 0}
 --- !u!54 &869781035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,8 +157,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &869781034
-CapsuleCollider:
+--- !u!65 &7319378472149387245
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -172,10 +167,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.32
-  m_Height: 0.036224995
-  m_Direction: 1
-  m_Center: {x: -0.16005437, y: -0.0071158805, z: -0.32}
+  serializedVersion: 2
+  m_Size: {x: 0.018354373, y: 0.036225, z: 0.64000005}
+  m_Center: {x: 0.0018104018, y: -0.0071154903, z: -0.32}
 --- !u!114 &869781033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,3 +285,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &3311877925748022697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190681709959476251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34208182, y: 0.03622499, z: 0.25019535}
+  m_Center: {x: -0.1600544, y: -0.0071156975, z: -0.5149038}
+--- !u!4 &7048331808183903856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2364183205624054859, guid: f22a595ed5608a048baf286d5ed38de0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4530638306508414405}
+  m_PrefabAsset: {fileID: 0}
