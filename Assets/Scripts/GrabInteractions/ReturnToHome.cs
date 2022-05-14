@@ -10,19 +10,18 @@ namespace FunWithFlags.GrabInteractions
 
         [Tooltip("El XRGrabInteractable que deseas afectar o vacio para referenciar al objeto que lo contiene")]
         XRGrabInteractable assignedInteractable;
-        [SerializeField] Vector3 returnToPosition;
+        [SerializeField] Vector3 returnPosition;
+        //[SerializeField] Quaternion returnToPosition;
         [SerializeField] float resetDelayTime;
         protected bool ShouldReturnHome { get; set; }
 
         void Awake()
         {
             assignedInteractable = GetComponents<XRGrabInteractable>()[0];
-            if (returnPoint)
+            if (!returnPoint)
             {
-                returnToPosition = returnPoint.transform.position;
-            } else
-            {
-                returnToPosition = this.transform.position;
+                returnPoint = new GameObject().transform;
+                returnPoint.position = returnPosition;
             }
             ShouldReturnHome = true;
         }
@@ -34,16 +33,32 @@ namespace FunWithFlags.GrabInteractions
 
         }
 
-        private void OnSelect(SelectEnterEventArgs arg0) => CancelInvoke(nameof(ReturnHome));
-        private void OnSelectExit(SelectExitEventArgs arg0) => Invoke(nameof(ReturnHome), resetDelayTime);
+        private void OnSelect(SelectEnterEventArgs arg0) => CancelInvoke(nameof(AttemptReturnHome));
+        private void OnSelectExit(SelectExitEventArgs arg0) => Invoke(nameof(AttemptReturnHome), resetDelayTime);
 
 
-        protected virtual void ReturnHome()
+        private void AttemptReturnHome()
         {
             if (ShouldReturnHome)
             {
-                transform.position = returnToPosition;
+                CancelInvoke(nameof(AttemptReturnHome));
+                transform.position = returnPoint.position;
             }
+        }
+
+        private void ReturnHome()
+        {
+            transform.position = returnPosition;
+        }
+
+        protected void PreReturnHome()
+        {
+
+        }
+
+        protected void PostReturnHome()
+        {
+
         }
 
         private void OnTriggerEnter(Collider other)
@@ -57,6 +72,22 @@ namespace FunWithFlags.GrabInteractions
             bool isEngaged = socket != null && socket.CanSelect(assignedInteractable);
             ShouldReturnHome = !isEngaged;
 
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.name.Equals("Suelo"))
+            {
+                Invoke(nameof(AttemptReturnHome), resetDelayTime);
+            }
+        }
+
+        private void OnCollisionExit(Collision collision)
+        {
+            if (collision.gameObject.name.Equals("Suelo"))
+            {
+                CancelInvoke(nameof(AttemptReturnHome));
+            }
         }
 
         private void OnTriggerExit(Collider other)
