@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 257161302}
   - component: {fileID: 257161301}
   - component: {fileID: 257161309}
-  - component: {fileID: 257161308}
+  - component: {fileID: 257161310}
   m_Layer: 6
   m_Name: Bola Roja
   m_TagString: Untagged
@@ -436,20 +436,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &257161308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257161300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a499051e35cf914988ac24e3c682133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  returnToPsition: {x: 0, y: 0, z: 0}
-  resetDelayTime: 0
 --- !u!114 &257161309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,8 +449,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnPoint: {fileID: 0}
-  returnPosition: {x: 0, y: 0, z: 0}
   resetDelayTime: 0
+--- !u!114 &257161310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257161300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &353361029
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +509,6 @@ GameObject:
   m_Component:
   - component: {fileID: 891445579}
   - component: {fileID: 891445578}
-  - component: {fileID: 891445580}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -591,18 +593,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &891445580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891445577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &931093496
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +608,7 @@ GameObject:
   - component: {fileID: 931093498}
   - component: {fileID: 931093497}
   - component: {fileID: 931093504}
+  - component: {fileID: 931093505}
   m_Layer: 0
   m_Name: Bola Azul
   m_TagString: Untagged
@@ -847,8 +838,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnPoint: {fileID: 353361030}
-  returnPosition: {x: 0, y: 0, z: 0}
   resetDelayTime: 2
+--- !u!114 &931093505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931093496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 1
+  bakeKeys:
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  bakeValues:
+  - data:
+    - {x: 0.57735026, y: -0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: 0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: -0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: -0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: -0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: -0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: -0.57735026}
+    - {x: 0.57735026, y: 0.57735026, z: 0.57735026}
+    - {x: 0.57735026, y: -0.57735026, z: 0.57735026}
 --- !u!1 &1117090874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,14 +1244,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158655994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6066, y: 1.070723, z: 0.1306}
+  m_LocalRotation: {x: 0.33027467, y: 0.6256525, z: -0.33088824, w: 0.6244922}
+  m_LocalPosition: {x: 0.6161, y: 1.0991, z: 0.197}
   m_LocalScale: {x: 0.14144611, y: 0.14144611, z: 0.14144611}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 55.746, y: 90.106, z: 0}
 --- !u!65 &1158656001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1244,7 +1278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnPoint: {fileID: 0}
-  returnPosition: {x: 0, y: 0, z: 0}
   resetDelayTime: 0
 --- !u!1 &1581677172
 GameObject:
