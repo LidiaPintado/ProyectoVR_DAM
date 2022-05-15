@@ -10,9 +10,9 @@ namespace FunWithFlags.GrabInteractions
 
         [Tooltip("El XRGrabInteractable que deseas afectar o vacio para referenciar al objeto que lo contiene")]
         XRGrabInteractable assignedInteractable;
-        [SerializeField] Vector3 returnPosition;
-        //[SerializeField] Quaternion returnToPosition;
-        [SerializeField] float resetDelayTime;
+
+        [Tooltip("Tiempo en segundos antes de que el objeto se teletransporte a su posicion inicial")]
+        [SerializeField] float resetDelayTime = 2f;
         protected bool ShouldReturnHome { get; set; }
 
         void Awake()
@@ -21,7 +21,7 @@ namespace FunWithFlags.GrabInteractions
             if (!returnPoint)
             {
                 returnPoint = new GameObject().transform;
-                returnPoint.position = returnPosition;
+                returnPoint.SetPositionAndRotation(transform.position, transform.rotation);
             }
             ShouldReturnHome = true;
         }
@@ -42,13 +42,22 @@ namespace FunWithFlags.GrabInteractions
             if (ShouldReturnHome)
             {
                 CancelInvoke(nameof(AttemptReturnHome));
-                transform.position = returnPoint.position;
+                ReturnHome();
             }
         }
 
-        private void ReturnHome()
+        public void ReturnHome()
         {
-            transform.position = returnPosition;
+            PreReturnHome();
+
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.rotation = returnPoint.rotation;
+            rigidbody.angularVelocity = Vector3.zero;
+            rigidbody.Sleep();
+            transform.SetPositionAndRotation(returnPoint.position, returnPoint.rotation);
+
+            PostReturnHome();
         }
 
         protected void PreReturnHome()
@@ -73,6 +82,14 @@ namespace FunWithFlags.GrabInteractions
             ShouldReturnHome = !isEngaged;
 
         }
+        private void OnTriggerExit(Collider other)
+        {
+            if (IsController(other.gameObject))
+            {
+                return;
+            }
+            ShouldReturnHome = true;
+        }
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -90,14 +107,6 @@ namespace FunWithFlags.GrabInteractions
             }
         }
 
-        private void OnTriggerExit(Collider other)
-        {
-            if (IsController(other.gameObject))
-            {
-                return;
-            }
-            ShouldReturnHome = true;
-        }
 
         private bool IsController(GameObject collided)
         {
