@@ -3,15 +3,15 @@
 /// <summary>
 /// Simple score manager. Requires SumScoreManager attached to game object in scene.
 /// </summary>
-public class SumScore {
+public class Puntuacion {
 
     public static int Score { get; protected set; }
-    public static int HighScore { get; set; }
+    public static int Fallos { get; protected set; }
 
-    private static SumScoreManager mgr; // Easy reference to manager instance
+    private static PuntuacionManager mgr; // Easy reference to manager instance
 
     // Private constructor to ensure only one copy exists
-    private SumScore () { }
+    private Puntuacion () { }
 	
     /// <summary>Adds points to total score</summary>
     /// <remarks>
@@ -28,6 +28,22 @@ public class SumScore {
             mgr.Updated(); // Let the manager know we've changed the score
         }
     }
+
+    public static void FailAdd(int pointsToAdd)
+    {
+        Debug.Log(pointsToAdd + " points " + ((pointsToAdd > 0) ? "added" : "removed"));
+        Fallos += pointsToAdd; // Add points to current score
+        if (MgrSet())
+        {
+            // Make sure we don't go negative unless we're supposed to
+            if (Fallos < 0 && !mgr.allowNegative)
+                Fallos = 0; // Reset score to 0
+            mgr.Updated(); // Let the manager know we've changed the score
+        }
+    }
+
+    public static void Exito() => Add(1);
+    public static void Fallo() => FailAdd(-1);
 
     /// <summary>Removes points from total score</summary>
     /// <param name="pointsToSubtract">Number of points to remove</param>
@@ -48,7 +64,7 @@ public class SumScore {
     /// <returns>True if successful, false if failed</returns>
     static bool MgrSet () {
         if (mgr == null) {
-            mgr = SumScoreManager.instance; // Set instance reference
+            mgr = PuntuacionManager.instance; // Set instance reference
             if (mgr == null) {
                 // Throw error message if we can't link
                 Debug.LogError("<b>SumScoreManager.instance</b> cannot be found. Make sure object is active in inspector.");
@@ -56,26 +72,6 @@ public class SumScore {
             }
         }
         return true;
-    }
-
-    /// <summary>Checks score against high score and saves if higher</summary>
-    public static void SaveHighScore () {
-        if (Score > HighScore) {
-            Debug.Log("New high score " + Score);
-            HighScore = Score;
-            PlayerPrefs.SetInt("sumHS", Score); // Store high score in player prefs
-            if (MgrSet())
-                mgr.UpdatedHS(); // Notify manager of change
-        }
-    }
-
-    /// <summary>Reset high score and clear from player prefs</summary>
-    public static void ClearHighScore () {
-        Debug.Log("Deleting high score");
-        PlayerPrefs.DeleteKey("sumHS");
-        HighScore = 0;
-        if (MgrSet())
-            mgr.UpdatedHS(); // Notify manager of change
     }
 
 }
