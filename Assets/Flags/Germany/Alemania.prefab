@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1034732417086491747
+--- !u!1 &1709694535036816066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8118786870546874346}
+  - component: {fileID: 7587910189475658059}
   m_Layer: 3
   m_Name: Pivot
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8118786870546874346
+--- !u!4 &7587910189475658059
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034732417086491747}
+  m_GameObject: {fileID: 1709694535036816066}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.009, z: -0.198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3298041458928933584}
+  m_Father: {fileID: 3756822883393215601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
---- !u!1 &6670514810463668411
+--- !u!1 &5004757411574386202
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,51 +39,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3298041458928933584}
-  - component: {fileID: 5535912500976305013}
-  - component: {fileID: 5968346338240586099}
-  - component: {fileID: 3109555420584514670}
-  - component: {fileID: 5607106090491000537}
-  - component: {fileID: 6054460895757298678}
-  - component: {fileID: 3109555420584514576}
+  - component: {fileID: 3756822883393215601}
+  - component: {fileID: 6139979347317491156}
+  - component: {fileID: 5419456421481359314}
+  - component: {fileID: 3657285288110772943}
+  - component: {fileID: 6068148537146437752}
+  - component: {fileID: 5612560058431122775}
+  - component: {fileID: 3657285288110772913}
   m_Layer: 3
-  m_Name: Toothpick flag
+  m_Name: Alemania
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3298041458928933584
+--- !u!4 &3756822883393215601
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_LocalRotation: {x: 0.70710737, y: 0, z: 0, w: 0.70710623}
   m_LocalPosition: {x: -0.0011000001, y: -0.0010924041, z: 0.0029567985}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8118786870546874346}
-  m_Father: {fileID: 8466483214608778894}
+  - {fileID: 7587910189475658059}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5535912500976305013
+--- !u!33 &6139979347317491156
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_Mesh: {fileID: 2812758956957328102, guid: 491b85434ad7ba1468c917662b3e8ffd, type: 3}
---- !u!23 &5968346338240586099
+--- !u!23 &5419456421481359314
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -119,55 +119,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &3109555420584514670
+--- !u!54 &3657285288110772943
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5607106090491000537
+--- !u!65 &6068148537146437752
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.016512856, y: 0.036225, z: 0.6399999}
   m_Center: {x: 0.002729661, y: -0.007116306, z: -0.32000023}
---- !u!65 &6054460895757298678
+--- !u!65 &5612560058431122775
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.3420818, y: 0.036225, z: 0.2494602}
   m_Center: {x: -0.16005442, y: -0.0071162283, z: -0.51527077}
---- !u!114 &3109555420584514576
+--- !u!114 &3657285288110772913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670514810463668411}
+  m_GameObject: {fileID: 5004757411574386202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 8118786870546874346}
+  m_AttachTransform: {fileID: 7587910189475658059}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -276,35 +276,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!1 &9094224555548875828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8466483214608778894}
-  m_Layer: 3
-  m_Name: Alemania
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8466483214608778894
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9094224555548875828}
-  m_LocalRotation: {x: 0, y: 0.062712155, z: 0, w: 0.9980317}
-  m_LocalPosition: {x: -0.381, y: 0.9533383, z: 3.9047294}
-  m_LocalScale: {x: 6.2783, y: 6.2783, z: 6.2783}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3298041458928933584}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 7.191, z: 0}
