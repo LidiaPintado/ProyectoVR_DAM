@@ -14,7 +14,7 @@ public class ComprobadorBandera : MonoBehaviour
 
     private void Awake()
     {
-        socket = GetComponents<XRSocketInteractor>()[0];
+        socket = this.GetComponent<XRSocketInteractor>();
         socket.onSelectEntered.AddListener(ValidarBandera);
         socket.onSelectExited.AddListener(LimpiarOutline);
 
@@ -23,19 +23,27 @@ public class ComprobadorBandera : MonoBehaviour
     public void ValidarBandera(XRBaseInteractable interactable)
     {
         Outline outline = interactable.GetComponent<Outline>();
-        outline.OutlineWidth = 10f;
+        if (outline == null)
+            Debug.LogError("El <b>interactable</b> no contiene un <b>Outline</b>");
+
+        AudioSource source = this.GetComponent<AudioSource>();
+        if (source == null)
+            Debug.LogError("<b>socket</b> no contiene un <b>AudioSource</b>");
+
+        outline.OutlineWidth = 5f;
+
         if (name.Equals(interactable.gameObject.name))
         {
-            // TODO: agregar sonido de exito y efecto confeti, fuegos artificiales o similar
-            //SoundManager.PlayOneShotMusic(this.GetComponent<AudioSource>(),);
-            //Puntuacion.Exito();
-            this.GetComponent<AudioSource>().PlayOneShot(exito);
+            interactable.gameObject.layer = LayerMask.NameToLayer("Non-Interactable");
             outline.OutlineColor = Color.green;
-        } else
+            source.PlayOneShot(exito);
+            Puntuacion.Exito();
+        }
+        else
         {
-            //Puntuacion.Fallo();
-            this.GetComponent<AudioSource>().PlayOneShot(fallo);
             outline.OutlineColor = Color.red;
+            source.PlayOneShot(fallo);
+            Puntuacion.Fallo();
         }
     }
 
