@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadScene(string dificultad)
     {
-        SceneManager.LoadScene(sceneName);
+        ValoresNivel.DIFICULTAD = dificultad;
+        SceneManager.LoadScene("EscenaConMapa");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MenuInicio");
     }
 }
