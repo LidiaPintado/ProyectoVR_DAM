@@ -24217,6 +24217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2963679527875475012, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 383
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963679527875475012, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
+        type: 3}
       propertyPath: m_SelectActionTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -24233,7 +24238,7 @@ PrefabInstance:
     - target: {fileID: 2963679527875475012, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967287
+      value: 4294967285
       objectReference: {fileID: 0}
     - target: {fileID: 2963679527875475012, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
@@ -24477,6 +24482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2963679528130745818, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 383
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963679528130745818, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
+        type: 3}
       propertyPath: m_SelectActionTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -24493,7 +24503,7 @@ PrefabInstance:
     - target: {fileID: 2963679528130745818, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967287
+      value: 4294967285
       objectReference: {fileID: 0}
     - target: {fileID: 2963679528130745818, guid: fb74ee13a1b7c4d46af7cd9111ef6aec,
         type: 3}
