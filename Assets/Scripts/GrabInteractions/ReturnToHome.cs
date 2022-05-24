@@ -17,19 +17,19 @@ namespace FunWithFlags.GrabInteractions
 
         void Awake()
         {
-            assignedInteractable = GetComponents<XRGrabInteractable>()[0];
+            this.assignedInteractable = GetComponents<XRGrabInteractable>()[0];
             if (!returnPoint)
             {
-                returnPoint = new GameObject().transform;
-                returnPoint.SetPositionAndRotation(transform.position, transform.rotation);
+                this.returnPoint = new GameObject().transform;
+                this.SetHome(this.transform);
             }
-            ShouldReturnHome = true;
+            this.ShouldReturnHome = true;
         }
 
         private void OnEnable()
         {
-            assignedInteractable.selectEntered.AddListener(OnSelect);
-            assignedInteractable.selectExited.AddListener(OnSelectExit);
+            this.assignedInteractable.selectEntered.AddListener(OnSelect);
+            this.assignedInteractable.selectExited.AddListener(OnSelectExit);
 
         }
 
@@ -52,10 +52,10 @@ namespace FunWithFlags.GrabInteractions
 
             Rigidbody rigidbody = GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
-            rigidbody.rotation = returnPoint.rotation;
+            rigidbody.rotation = this.returnPoint.rotation;
             rigidbody.angularVelocity = Vector3.zero;
             rigidbody.Sleep();
-            transform.SetPositionAndRotation(returnPoint.position, returnPoint.rotation);
+            this.transform.SetPositionAndRotation(this.returnPoint.position, this.returnPoint.rotation);
 
             PostReturnHome();
         }
@@ -78,8 +78,8 @@ namespace FunWithFlags.GrabInteractions
             }
 
             var socket = other.gameObject.GetComponent<XRSocketInteractor>();
-            bool isEngaged = socket != null && socket.CanSelect(assignedInteractable);
-            ShouldReturnHome = !isEngaged;
+            bool isEngaged = socket != null && socket.CanSelect(this.assignedInteractable);
+            this.ShouldReturnHome = !isEngaged;
 
         }
         private void OnTriggerExit(Collider other)
@@ -88,14 +88,14 @@ namespace FunWithFlags.GrabInteractions
             {
                 return;
             }
-            ShouldReturnHome = true;
+            this.ShouldReturnHome = true;
         }
 
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.name.Equals("Suelo"))
             {
-                Invoke(nameof(AttemptReturnHome), resetDelayTime);
+                Invoke(nameof(this.AttemptReturnHome), this.resetDelayTime);
             }
         }
 
@@ -103,7 +103,7 @@ namespace FunWithFlags.GrabInteractions
         {
             if (collision.gameObject.name.Equals("Suelo"))
             {
-                CancelInvoke(nameof(AttemptReturnHome));
+                CancelInvoke(nameof(this.AttemptReturnHome));
             }
         }
 
@@ -111,6 +111,17 @@ namespace FunWithFlags.GrabInteractions
         private bool IsController(GameObject collided)
         {
             return collided.GetComponent<XRBaseController>() != null;
+        }
+
+        public void SetHome(Transform destination)
+        {
+            this.returnPoint.SetPositionAndRotation(destination.position, destination.rotation);
+        }
+
+        public void TeleportToNewHome(Transform destination)
+        {
+            this.SetHome(destination);
+            this.ReturnHome();
         }
     }
 }
