@@ -32,7 +32,6 @@ public class PuntuacionManager : MonoBehaviour {
         Puntuacion.Reset(); // Ensure score is 0 when object loads
         if (initialScore != 0)
             Puntuacion.Add(initialScore);  // Set initial score
-
         Updated(); // Set initial score in UI
     }
 

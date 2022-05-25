@@ -445,6 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &29265810
 AudioSource:
@@ -979,6 +981,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &94822215
 AudioSource:
@@ -1326,6 +1330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &106783694
 AudioSource:
@@ -1923,6 +1929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &137548357
 AudioSource:
@@ -2440,6 +2448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &148540125
 AudioSource:
@@ -2826,6 +2836,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &169465872
 AudioSource:
@@ -3090,6 +3102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &172100598
 AudioSource:
@@ -4307,6 +4321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &239012218
 AudioSource:
@@ -5723,6 +5739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &400251844
 AudioSource:
@@ -7000,6 +7018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &515626262
 AudioSource:
@@ -8371,6 +8391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &590882513
 AudioSource:
@@ -9606,6 +9628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &666185640
 AudioSource:
@@ -9958,6 +9982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &701324021
 AudioSource:
@@ -10506,6 +10532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &720092698
 AudioSource:
@@ -10770,6 +10798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &720642981
 AudioSource:
@@ -11295,6 +11325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &739244894
 AudioSource:
@@ -13420,6 +13452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &944409948
 AudioSource:
@@ -13896,6 +13930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &960977614
 AudioSource:
@@ -14804,6 +14840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1022936975
 AudioSource:
@@ -15309,6 +15347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1057808166
 AudioSource:
@@ -16597,6 +16637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1100439239
 AudioSource:
@@ -17328,6 +17370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1164108958
 AudioSource:
@@ -17880,6 +17924,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1194826648
 AudioSource:
@@ -18234,6 +18280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1196584185
 AudioSource:
@@ -18932,6 +18980,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1279814487
 AudioSource:
@@ -19238,6 +19288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1280252513
 AudioSource:
@@ -19530,6 +19582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1296426982
 AudioSource:
@@ -20075,6 +20129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1332739080
 AudioSource:
@@ -20523,6 +20579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1346888620
 AudioSource:
@@ -20855,6 +20913,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1371517464
 AudioSource:
@@ -21119,6 +21179,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1373956722
 AudioSource:
@@ -22067,6 +22129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1437001519
 AudioSource:
@@ -22393,6 +22457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1453085658
 AudioSource:
@@ -23187,6 +23253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1526117789
 AudioSource:
@@ -23689,6 +23757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1574892017
 AudioSource:
@@ -23967,6 +24037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1581564537
 AudioSource:
@@ -25101,6 +25173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1614826037
 AudioSource:
@@ -25687,6 +25761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1637869643
 AudioSource:
@@ -26030,6 +26106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1644348820
 AudioSource:
@@ -27362,6 +27440,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1770418684
 AudioSource:
@@ -28128,6 +28208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1863635940
 AudioSource:
@@ -28392,6 +28474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1864549845
 AudioSource:
@@ -28687,6 +28771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1884961028
 AudioSource:
@@ -29249,6 +29335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &1933270425
 AudioSource:
@@ -29788,6 +29876,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &2002164580
 AudioSource:
@@ -30478,6 +30568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  exitos: {fileID: 7759043981181122740}
+  fallos: {fileID: 7759043981181122739}
   loadDelayTime: 2
 --- !u!82 &2046775352
 AudioSource:
