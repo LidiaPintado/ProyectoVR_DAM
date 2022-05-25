@@ -33,6 +33,9 @@ public class MenuManager : MonoBehaviour
         this.menu = GameObject.Find("Menu");
         this.ganador = GameObject.Find("Resultado");
 
+        ganador.SetActive(false);
+        menu.SetActive(false); 
+
         if(Ganador())
         {
             
