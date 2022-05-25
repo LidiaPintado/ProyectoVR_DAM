@@ -2017,6 +2017,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1684227479}
+    - target: {fileID: 1657064128926537744, guid: 3ff31d206de2e474aa42c9bfb5bc3230,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2774575701527755630, guid: 3ff31d206de2e474aa42c9bfb5bc3230,
         type: 3}
       propertyPath: m_Name
