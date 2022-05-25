@@ -40,22 +40,24 @@ public class ComprobadorBandera : MonoBehaviour
             interactable.gameObject.layer = LayerMask.NameToLayer("Non-Interactable");
             outline.OutlineColor = Color.green;
             source.PlayOneShot(exito);
-            Puntuacion.Exito();
             ValoresNivel.EXITOS += 1;
+            Puntuacion.Exito();
+            Debug.Log(ValoresNivel.EXITOS);
             if(ValoresNivel.EXITOS == ValoresNivel.MAX_EXITOS)
             {
-                Invoke(nameof(ChangeScene.LoadMenu), loadDelayTime);
+                ChangeScene.LoadMenu();
             }
         }
         else
         {
             outline.OutlineColor = Color.red;
             source.PlayOneShot(fallo);
-            Puntuacion.Fallo();
             ValoresNivel.FALLOS -= 1;
+            Puntuacion.Fallo();
+            Debug.Log(ValoresNivel.FALLOS);
             if(ValoresNivel.FALLOS == 0)
             {
-                Invoke(nameof(ChangeScene.LoadMenu), loadDelayTime);
+                ChangeScene.LoadMenu();
             }
         }
     }

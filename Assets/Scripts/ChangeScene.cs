@@ -11,7 +11,7 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("EscenaConMapa");
     }
 
-    public void LoadMenu()
+    public static void LoadMenu()
     {
         SceneManager.LoadScene("MenuInicio");
     }
