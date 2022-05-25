@@ -445,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &29265810
 AudioSource:
   m_ObjectHideFlags: 0
@@ -978,6 +979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &94822215
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1324,6 +1326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &106783694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1920,6 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &137548357
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2436,6 +2440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &148540125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2821,6 +2826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &169465872
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3084,6 +3090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &172100598
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4300,6 +4307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &239012218
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5715,6 +5723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &400251844
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6991,6 +7000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &515626262
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7600,7 +7610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550941519}
   - component: {fileID: 550941518}
-  - component: {fileID: 550941517}
+  - component: {fileID: 550941520}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7608,25 +7618,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &550941517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550941516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &550941518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7657,6 +7648,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550941520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550941516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 1.4
+  m_MaxTrackedDeviceRaycastDistance: 1000
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!4 &558240628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4239241825834946, guid: f0c2d9c0796a76d428d02150209c6d26,
@@ -8353,6 +8371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &590882513
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9587,6 +9606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &666185640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9938,6 +9958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &701324021
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10485,6 +10506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &720092698
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10748,6 +10770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &720642981
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11272,6 +11295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &739244894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13396,6 +13420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &944409948
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13871,6 +13896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &960977614
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14368,6 +14394,52 @@ Transform:
   m_Father: {fileID: 1770418678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -54.927, y: 180, z: 90}
+--- !u!1 &1005052378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005052380}
+  - component: {fileID: 1005052379}
+  m_Layer: 0
+  m_Name: "Gesti\xF3nNivel"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1005052379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005052378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324250ae6bcd702409963d1d2a45de7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punMax: {fileID: 7759043981181122741}
+  fallMax: {fileID: 7759043981181122739}
+--- !u!4 &1005052380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005052378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5546873, y: 1.4819087, z: -6.6828365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1010664508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14732,6 +14804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1022936975
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15236,6 +15309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1057808166
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16523,6 +16597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1100439239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17253,6 +17328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1164108958
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17804,6 +17880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1194826648
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18157,6 +18234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1196584185
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18854,6 +18932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1279814487
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19159,6 +19238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1280252513
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19450,6 +19530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1296426982
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19994,6 +20075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1332739080
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20441,6 +20523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1346888620
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20772,6 +20855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1371517464
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21035,6 +21119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1373956722
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21982,6 +22067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1437001519
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22307,6 +22393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1453085658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23100,6 +23187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1526117789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23601,6 +23689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1574892017
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23878,6 +23967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1581564537
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25011,6 +25101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1614826037
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25596,6 +25687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1637869643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25938,6 +26030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1644348820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27269,6 +27362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1770418684
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28034,6 +28128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1863635940
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28297,6 +28392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1864549845
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28591,6 +28687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1884961028
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29152,6 +29249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &1933270425
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29690,6 +29788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &2002164580
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30379,6 +30478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exito: {fileID: 8300000, guid: d4dde73964ad16c43ac8c3054f6facf9, type: 3}
   fallo: {fileID: 8300000, guid: 3d70e3d3dde2e83459b892fe6033f72b, type: 3}
+  loadDelayTime: 2
 --- !u!82 &2046775352
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31749,9 +31849,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245375514720413173, guid: e8fc6441c67774b4c8fc753680c79023,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245375514720413173, guid: e8fc6441c67774b4c8fc753680c79023,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1532642086}
+    - target: {fileID: 5245375514720413173, guid: e8fc6441c67774b4c8fc753680c79023,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fc6441c67774b4c8fc753680c79023, type: 3}
 --- !u!1001 &6428495807299082514
@@ -32169,12 +32279,46 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacion
       value: 
+      objectReference: {fileID: 7759043981181122740}
+    - target: {fileID: 8926545728551440203, guid: 136cb8512c45b7c4da0fa55b67509c7c,
+        type: 3}
+      propertyPath: allowNegative
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926545728551440203, guid: 136cb8512c45b7c4da0fa55b67509c7c,
+        type: 3}
+      propertyPath: storeHighScore
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 136cb8512c45b7c4da0fa55b67509c7c, type: 3}
 --- !u!114 &7759043981181122739 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6956066530575934753, guid: 136cb8512c45b7c4da0fa55b67509c7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7759043981181122738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7759043981181122740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7759043980522733075, guid: 136cb8512c45b7c4da0fa55b67509c7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7759043981181122738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7759043981181122741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5310667471505719351, guid: 136cb8512c45b7c4da0fa55b67509c7c,
     type: 3}
   m_PrefabInstance: {fileID: 7759043981181122738}
   m_PrefabAsset: {fileID: 0}

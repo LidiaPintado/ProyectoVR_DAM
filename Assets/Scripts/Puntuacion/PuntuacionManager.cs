@@ -38,7 +38,8 @@ public class PuntuacionManager : MonoBehaviour {
 
     /// <summary>Notify this manager of a change in score</summary>
     public void Updated () {
-        puntuacion.text = Puntuacion.Score.ToString("0"); // Post new score to text field
+        puntuacion.text = ValoresNivel.EXITOS.ToString("0"); // Post new score to text field
+        fallos.text = ValoresNivel.FALLOS.ToString("0");
     }
 
     

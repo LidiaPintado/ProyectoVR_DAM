@@ -31,7 +31,7 @@ public class Puntuacion {
 
     public static void FailAdd(int pointsToAdd)
     {
-        Debug.Log(pointsToAdd + " points " + ((pointsToAdd > 0) ? "added" : "removed"));
+        //Debug.Log(pointsToAdd + " points " + ((pointsToAdd > 0) ? "added" : "removed"));
         Fallos += pointsToAdd; // Add points to current score
         if (MgrSet())
         {

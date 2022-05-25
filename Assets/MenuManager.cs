@@ -10,8 +10,8 @@ public class MenuManager : MonoBehaviour
 
     public GameObject menu;
     public GameObject ganador;
-    private static readonly Color VERDE = new Color(87, 217, 120);
-    private static readonly Color ROJO = new Color(238, 91, 91);
+    private static readonly Color VERDE = new Color32(87, 217, 120, 255);
+    private static readonly Color ROJO = new Color32(238, 91, 91, 255);
 
     private void Awake()
     {
@@ -26,19 +26,22 @@ public class MenuManager : MonoBehaviour
     {
         Image color = GameObject.Find("/MenuInicial/Resultado/Panel/Color").GetComponent<Image>();
         Text mensajeResultado = GameObject.Find("/MenuInicial/Resultado/Panel/Mensaje").GetComponent<Text>();
-        Text banderas = GameObject.Find("/MenuInicial/Resultado/Panel/Mensaje").GetComponent<Text>();
-        Text banderasMax = GameObject.Find("/MenuInicial/Resultado/Panel/Mensaje").GetComponent<Text>();
-        Text fallos = GameObject.Find("/MenuInicial/Resultado/Panel/Mensaje").GetComponent<Text>();
+        Text banderas = GameObject.Find("/MenuInicial/Resultado/Panel/Banderas").GetComponent<Text>();
+        Text banderasMax = GameObject.Find("/MenuInicial/Resultado/Panel/MaxBanderas").GetComponent<Text>();
+        Text fallos = GameObject.Find("/MenuInicial/Resultado/Panel/Fallos").GetComponent<Text>();
 
         this.menu = GameObject.Find("Menu");
         this.ganador = GameObject.Find("Resultado");
+
+        ganador.SetActive(false);
+        menu.SetActive(false); 
 
         if(Ganador())
         {
             
             banderas.text = ValoresNivel.EXITOS + "";
             banderasMax.text = ValoresNivel.MAX_EXITOS + "";
-            fallos.text = ValoresNivel.FALLOS + "";
+            fallos.text = (ValoresNivel.MAX_FALLOS - ValoresNivel.FALLOS) + "";
 
             if (ValoresNivel.FALLOS == 0)
             {

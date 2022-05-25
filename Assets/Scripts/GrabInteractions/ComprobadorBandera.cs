@@ -12,6 +12,9 @@ public class ComprobadorBandera : MonoBehaviour
     public AudioClip exito;
     public AudioClip fallo;
 
+    [Tooltip("Tiempo en segundos antes de que cargue la escena una vez ganes o pierdas")]
+    [SerializeField] float loadDelayTime = 2f;
+
     private void Awake()
     {
         socket = this.GetComponent<XRSocketInteractor>();
@@ -37,13 +40,25 @@ public class ComprobadorBandera : MonoBehaviour
             interactable.gameObject.layer = LayerMask.NameToLayer("Non-Interactable");
             outline.OutlineColor = Color.green;
             source.PlayOneShot(exito);
+            ValoresNivel.EXITOS += 1;
             Puntuacion.Exito();
+            Debug.Log(ValoresNivel.EXITOS);
+            if(ValoresNivel.EXITOS == ValoresNivel.MAX_EXITOS)
+            {
+                ChangeScene.LoadMenu();
+            }
         }
         else
         {
             outline.OutlineColor = Color.red;
             source.PlayOneShot(fallo);
+            ValoresNivel.FALLOS -= 1;
             Puntuacion.Fallo();
+            Debug.Log(ValoresNivel.FALLOS);
+            if(ValoresNivel.FALLOS == 0)
+            {
+                ChangeScene.LoadMenu();
+            }
         }
     }
 
