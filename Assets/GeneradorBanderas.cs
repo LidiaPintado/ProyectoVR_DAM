@@ -7,10 +7,12 @@ public class GeneradorBanderas : MonoBehaviour
 {
     private static GameObject[] banderas;
     private static GameObject[] displays;
+    private static Quaternion rotacionDeseada;
     private static int cantidadObjetivoBanderas;
-    private void Awake()
+    private void Start()
     {
         cantidadObjetivoBanderas = ValoresNivel.MAX_EXITOS;
+        rotacionDeseada = GetRotacionDeseada();
         banderas = GetBanderas();
         displays = GetDisplays();
         SeleccionarBanderas();
@@ -34,6 +36,16 @@ public class GeneradorBanderas : MonoBehaviour
 
         return displays;
     }
+
+    private static Quaternion GetRotacionDeseada()
+    {
+        GameObject banderaEjemplo = GameObject.Find("BanderaEjemplo");
+
+        if (banderaEjemplo == null)
+            throw new System.Exception("BanderaEjemplo no encontrada. No hay ningun objeto con el nombre <b>BanderaEjemplo</b> del cual sacar la rotación");
+
+        return banderaEjemplo.transform.rotation;
+    }
     private void SeleccionarBanderas()
     {
         ArrayList seleccionadas = new ArrayList();
@@ -48,20 +60,12 @@ public class GeneradorBanderas : MonoBehaviour
                     throw new System.Exception("ReturnToHome component no existente en la bandera indicada");
                 }
                 GameObject display = displays[seleccionadas.Count];
-                teleporter.TeleportToNewHome(display.transform);
+                Transform transformObjetivo = new GameObject().transform;
+                transformObjetivo.SetPositionAndRotation(display.transform.position, rotacionDeseada);
+                teleporter.TeleportToNewHome(transformObjetivo);
                 seleccionadas.Add(random);
             }
                 
-        }
-    }
-
-    void Start()
-    {
-        GameObject[] banderas = GameObject.FindGameObjectsWithTag("Bandera");
-        if (banderas == null || banderas.Length == 0)
-        {
-            Debug.LogError("Banderas no encontrado");
-            return;
         }
     }
 }
