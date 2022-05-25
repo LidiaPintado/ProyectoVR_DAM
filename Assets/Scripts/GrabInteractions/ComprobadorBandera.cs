@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class ComprobadorBandera : MonoBehaviour
@@ -11,6 +12,8 @@ public class ComprobadorBandera : MonoBehaviour
     XRSocketInteractor socket;
     public AudioClip exito;
     public AudioClip fallo;
+    public Text exitos;
+    public Text fallos;
 
     [Tooltip("Tiempo en segundos antes de que cargue la escena una vez ganes o pierdas")]
     [SerializeField] float loadDelayTime = 2f;
@@ -41,7 +44,7 @@ public class ComprobadorBandera : MonoBehaviour
             outline.OutlineColor = Color.green;
             source.PlayOneShot(exito);
             ValoresNivel.EXITOS += 1;
-            Puntuacion.Exito();
+            exitos.text = ValoresNivel.EXITOS + "";
             Debug.Log(ValoresNivel.EXITOS);
             if(ValoresNivel.EXITOS == ValoresNivel.MAX_EXITOS)
             {
@@ -53,7 +56,7 @@ public class ComprobadorBandera : MonoBehaviour
             outline.OutlineColor = Color.red;
             source.PlayOneShot(fallo);
             ValoresNivel.FALLOS -= 1;
-            Puntuacion.Fallo();
+            fallos.text = ValoresNivel.FALLOS + "";
             Debug.Log(ValoresNivel.FALLOS);
             if(ValoresNivel.FALLOS == 0)
             {
