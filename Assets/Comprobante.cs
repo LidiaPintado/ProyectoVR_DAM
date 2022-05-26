@@ -13,29 +13,6 @@ public class Comprobante : MonoBehaviour
     void Start()
     {
         Debug.Log(ValoresNivel.DIFICULTAD);
-        switch (ValoresNivel.DIFICULTAD)
-        {
-            case "Hard":
-                changeValues(10, 3);
-                break;
-
-            case "Easy":
-                changeValues(5, 7);
-                break;
-
-            default:
-
-                break;
-
-        }
-    }
-
-    private void changeValues(int max_exitos, int fallos)
-    {
-        ValoresNivel.MAX_EXITOS = max_exitos;
-        ValoresNivel.FALLOS = fallos;
-        ValoresNivel.MAX_FALLOS = fallos;
-        ValoresNivel.EXITOS = 0;
         punMax.text = ValoresNivel.MAX_EXITOS + "";
         fallMax.text = ValoresNivel.FALLOS + "";
     }
