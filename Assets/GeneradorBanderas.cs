@@ -18,7 +18,7 @@ public class GeneradorBanderas : MonoBehaviour
         SeleccionarBanderas();
     }
 
-    private static GameObject[] GetBanderas()
+    private GameObject[] GetBanderas()
     {
         GameObject[] banderas = GameObject.FindGameObjectsWithTag("Bandera");
         if (banderas == null || banderas.Length == 0)
@@ -27,7 +27,7 @@ public class GeneradorBanderas : MonoBehaviour
         return banderas;
     }
 
-    private static GameObject[] GetDisplays()
+    private GameObject[] GetDisplays()
     {
         GameObject[] displays = GameObject.FindGameObjectsWithTag("Display");
         
@@ -37,7 +37,7 @@ public class GeneradorBanderas : MonoBehaviour
         return displays;
     }
 
-    private static Quaternion GetRotacionDeseada()
+    private Quaternion GetRotacionDeseada()
     {
         GameObject banderaEjemplo = GameObject.Find("BanderaEjemplo");
 
@@ -48,6 +48,7 @@ public class GeneradorBanderas : MonoBehaviour
     }
     private void SeleccionarBanderas()
     {
+        deshabilitaColisionBanderas();
         ArrayList seleccionadas = new ArrayList();
         while (seleccionadas.Count != cantidadObjetivoBanderas)
         {
@@ -67,5 +68,22 @@ public class GeneradorBanderas : MonoBehaviour
             }
                 
         }
+        Invoke(nameof(habilitaColisionbanderas), 1);
+    }
+
+    private void deshabilitaColisionBanderas()
+    {
+        int layerBandera = LayerMask.NameToLayer("Bandera");
+        if (layerBandera == -1)
+            throw new System.Exception("Layer <b>Bandera</b> no encontrada");
+        Physics.IgnoreLayerCollision(layerBandera, layerBandera);
+    }
+
+    private void habilitaColisionbanderas()
+    {
+        int layerBandera = LayerMask.NameToLayer("Bandera");
+        if (layerBandera == -1)
+            throw new System.Exception("Layer <b>Bandera</b> no encontrada");
+        Physics.IgnoreLayerCollision(layerBandera, layerBandera, false);
     }
 }
