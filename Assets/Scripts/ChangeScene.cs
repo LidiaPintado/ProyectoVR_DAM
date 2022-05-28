@@ -18,8 +18,10 @@ public class ChangeScene : MonoBehaviour
                 changeValues(5, 7);
                 break;
 
-            default:
+            case "Perso":
+                break;
 
+            default:
                 break;
 
         }
@@ -34,9 +36,14 @@ public class ChangeScene : MonoBehaviour
     private void changeValues(int max_exitos, int fallos)
     {
         ValoresNivel.MAX_EXITOS = max_exitos;
-        ValoresNivel.FALLOS = fallos;
+        ValoresNivel.FALLOS = 0;
         ValoresNivel.MAX_FALLOS = fallos;
         ValoresNivel.EXITOS = 0;
         
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
