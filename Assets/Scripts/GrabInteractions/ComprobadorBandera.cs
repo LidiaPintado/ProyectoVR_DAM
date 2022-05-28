@@ -55,12 +55,15 @@ public class ComprobadorBandera : MonoBehaviour
         {
             outline.OutlineColor = Color.red;
             source.PlayOneShot(fallo);
-            ValoresNivel.FALLOS -= 1;
-            fallos.text = ValoresNivel.FALLOS + "";
-            Debug.Log(ValoresNivel.FALLOS);
-            if(ValoresNivel.FALLOS == 0)
-            {
-                ChangeScene.LoadMenu();
+            ValoresNivel.FALLOS += 1;
+            if(ValoresNivel.MAX_FALLOS != 100) { 
+                ValoresNivel.MAX_FALLOS -= 1;
+                fallos.text = ValoresNivel.MAX_FALLOS + "";
+                Debug.Log(ValoresNivel.MAX_FALLOS);
+                if(ValoresNivel.MAX_FALLOS == 0)
+                {
+                    ChangeScene.LoadMenu();
+                }
             }
         }
     }

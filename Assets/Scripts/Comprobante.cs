@@ -14,6 +14,11 @@ public class Comprobante : MonoBehaviour
     {
         Debug.Log(ValoresNivel.DIFICULTAD);
         punMax.text = ValoresNivel.MAX_EXITOS + "";
-        fallMax.text = ValoresNivel.FALLOS + "";
+        if(ValoresNivel.MAX_FALLOS != 100)
+            fallMax.text = ValoresNivel.MAX_FALLOS + "";
+        else
+        {
+            fallMax.text = "∞";
+        }
     }
 }
