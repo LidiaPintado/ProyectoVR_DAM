@@ -41,9 +41,9 @@ public class MenuManager : MonoBehaviour
             
             banderas.text = ValoresNivel.EXITOS + "";
             banderasMax.text = ValoresNivel.MAX_EXITOS + "";
-            fallos.text = (ValoresNivel.MAX_FALLOS - ValoresNivel.FALLOS) + "";
+            fallos.text = ValoresNivel.FALLOS + "";
 
-            if (ValoresNivel.FALLOS == 0)
+            if (ValoresNivel.MAX_FALLOS == 0)
             {
                 mensajeResultado.text = "No has completado el nivel. Suerte en la próxima";
                 color.color = ROJO;
@@ -70,7 +70,7 @@ public class MenuManager : MonoBehaviour
 
     private bool Ganador()
     {
-        return (ValoresNivel.FALLOS == 0) || (ValoresNivel.EXITOS == ValoresNivel.MAX_EXITOS);
+        return (ValoresNivel.MAX_FALLOS == 0) || (ValoresNivel.EXITOS == ValoresNivel.MAX_EXITOS);
     }
 
 }
