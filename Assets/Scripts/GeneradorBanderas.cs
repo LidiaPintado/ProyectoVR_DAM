@@ -14,7 +14,6 @@ public class GeneradorBanderas : MonoBehaviour
         cantidadObjetivoBanderas = ValoresNivel.MAX_EXITOS;
         rotacionDeseada = GetRotacionDeseada();
         banderas = GetBanderas();
-        displays = GetDisplays();
         SeleccionarBanderas();
     }
 
@@ -25,16 +24,6 @@ public class GeneradorBanderas : MonoBehaviour
             throw new System.Exception("Banderas no encontradas. No hay ningun objeto con el tag <b>Bandera</b>");
 
         return banderas;
-    }
-
-    private GameObject[] GetDisplays()
-    {
-        GameObject[] displays = GameObject.FindGameObjectsWithTag("Display");
-        
-        if (displays == null || displays.Length == 0)
-            throw new System.Exception("Displays no encontrados. No hay ningun objeto con el tag <b>Display</b>");
-
-        return displays;
     }
 
     private Quaternion GetRotacionDeseada()
@@ -48,7 +37,7 @@ public class GeneradorBanderas : MonoBehaviour
     }
     private void SeleccionarBanderas()
     {
-        deshabilitaColisionBanderas();
+        DeshabilitaColisionBanderas();
         ArrayList seleccionadas = new ArrayList();
         while (seleccionadas.Count != cantidadObjetivoBanderas)
         {
@@ -60,7 +49,7 @@ public class GeneradorBanderas : MonoBehaviour
                 {
                     throw new System.Exception("ReturnToHome component no existente en la bandera indicada");
                 }
-                GameObject display = displays[seleccionadas.Count];
+                GameObject display = GetDisplay(seleccionadas.Count);
                 Transform transformObjetivo = new GameObject().transform;
                 transformObjetivo.SetPositionAndRotation(display.transform.position, rotacionDeseada);
                 teleporter.TeleportToNewHome(transformObjetivo);
@@ -68,10 +57,20 @@ public class GeneradorBanderas : MonoBehaviour
             }
                 
         }
-        Invoke(nameof(habilitaColisionbanderas), 1);
+        Invoke(nameof(HabilitaColisionbanderas), 1);
     }
 
-    private void deshabilitaColisionBanderas()
+    private GameObject GetDisplay(int numero)
+    {
+        GameObject display;
+        display = GameObject.Find("Display" + numero);
+        if (!display)
+            throw new System.Exception("No existe el objeto <b>Display"+numero+"</b>");
+        return display;
+
+    }
+
+    private void DeshabilitaColisionBanderas()
     {
         int layerBandera = LayerMask.NameToLayer("Bandera");
         if (layerBandera == -1)
@@ -79,7 +78,7 @@ public class GeneradorBanderas : MonoBehaviour
         Physics.IgnoreLayerCollision(layerBandera, layerBandera);
     }
 
-    private void habilitaColisionbanderas()
+    private void HabilitaColisionbanderas()
     {
         int layerBandera = LayerMask.NameToLayer("Bandera");
         if (layerBandera == -1)
