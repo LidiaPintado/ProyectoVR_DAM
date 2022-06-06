@@ -30,6 +30,15 @@ public class MenuManager : MonoBehaviour
         Text banderasMax = GameObject.Find("/MenuInicial/Resultado/Panel/MaxBanderas").GetComponent<Text>();
         Text fallos = GameObject.Find("/MenuInicial/Resultado/Panel/Fallos").GetComponent<Text>();
 
+        Outline msgF1 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF1").GetComponent<Outline>();
+        Outline msgF2 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF2").GetComponent<Outline>();
+        Outline msgF3 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF3").GetComponent<Outline>();
+        Outline msgF4 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF4").GetComponent<Outline>();
+        Outline outlineMsgRes = mensajeResultado.GetComponent<Outline>();
+        Outline outlineBanderas = banderas.GetComponent<Outline>();
+        Outline outlineBanMax = banderasMax.GetComponent<Outline>();
+        Outline outlineFallos = fallos.GetComponent<Outline>();
+
         this.menu = GameObject.Find("Menu");
         this.ganador = GameObject.Find("Resultado");
 
@@ -46,12 +55,26 @@ public class MenuManager : MonoBehaviour
             if (ValoresNivel.MAX_FALLOS == 0)
             {
                 mensajeResultado.text = "No has completado el nivel. Suerte en la próxima";
-                color.color = ROJO;
+                msgF1.OutlineColor = ROJO;
+                msgF2.OutlineColor = ROJO;
+                msgF3.OutlineColor = ROJO;
+                msgF4.OutlineColor = ROJO;
+                outlineMsgRes.OutlineColor = ROJO;
+                outlineBanderas.OutlineColor = ROJO;
+                outlineBanMax.OutlineColor = ROJO;
+                outlineFallos.OutlineColor = ROJO;
             }
             else
             {
                 mensajeResultado.text = "Enhorabuena has completado el nivel";
-                color.color = VERDE;
+                msgF1.OutlineColor = VERDE;
+                msgF2.OutlineColor = VERDE;
+                msgF3.OutlineColor = VERDE;
+                msgF4.OutlineColor = VERDE;
+                outlineMsgRes.OutlineColor = VERDE;
+                outlineBanderas.OutlineColor = VERDE;
+                outlineBanMax.OutlineColor = VERDE;
+                outlineFallos.OutlineColor = VERDE;
             }
 
             ganador.SetActive(true);
