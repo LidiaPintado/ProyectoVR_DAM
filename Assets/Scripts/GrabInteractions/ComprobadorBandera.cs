@@ -36,7 +36,7 @@ public class ComprobadorBandera : MonoBehaviour
         if (source == null)
             Debug.LogError("<b>socket</b> no contiene un <b>AudioSource</b>");
 
-        outline.OutlineWidth = 5f;
+        outline.OutlineWidth = 8f;
 
         if (name.Equals(interactable.gameObject.name))
         {
