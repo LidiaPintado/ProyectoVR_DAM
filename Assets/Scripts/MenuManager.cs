@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +11,8 @@ public class MenuManager : MonoBehaviour
 
     public GameObject menu;
     public GameObject ganador;
-    private static readonly Color VERDE = new Color32(87, 217, 120, 255);
-    private static readonly Color ROJO = new Color32(238, 91, 91, 255);
+    private static readonly Color VERDE = Color.green;
+    private static readonly Color ROJO = Color.red;
 
     private void Awake()
     {
@@ -20,24 +21,26 @@ public class MenuManager : MonoBehaviour
         else
             Destroy(gameObject); // Kill yo self
     }
-
     // Start is called before the first frame update
     void Start()
     {
-        Image color = GameObject.Find("/MenuInicial/Resultado/Panel/Color").GetComponent<Image>();
-        Text mensajeResultado = GameObject.Find("/MenuInicial/Resultado/Panel/Mensaje").GetComponent<Text>();
-        Text banderas = GameObject.Find("/MenuInicial/Resultado/Panel/Banderas").GetComponent<Text>();
-        Text banderasMax = GameObject.Find("/MenuInicial/Resultado/Panel/MaxBanderas").GetComponent<Text>();
-        Text fallos = GameObject.Find("/MenuInicial/Resultado/Panel/Fallos").GetComponent<Text>();
+        string ruta = "/MenuInicial/Resultado/Panel/";
+        Image color = GameObject.Find(ruta + "Color").GetComponent<Image>();
+        TextMeshProUGUI mensajeResultado = GameObject.Find(ruta + "Mensaje").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI banderas = GameObject.Find(ruta + "Banderas").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI banderasMax = GameObject.Find(ruta + "MaxBanderas").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI fallos = GameObject.Find(ruta + "Fallos").GetComponent<TextMeshProUGUI>();
 
-        Outline msgF1 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF1").GetComponent<Outline>();
-        Outline msgF2 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF2").GetComponent<Outline>();
-        Outline msgF3 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF3").GetComponent<Outline>();
-        Outline msgF4 = GameObject.Find("/MenuInicial/Resultado/Panel/MsgF4").GetComponent<Outline>();
-        Outline outlineMsgRes = mensajeResultado.GetComponent<Outline>();
-        Outline outlineBanderas = banderas.GetComponent<Outline>();
-        Outline outlineBanMax = banderasMax.GetComponent<Outline>();
-        Outline outlineFallos = fallos.GetComponent<Outline>();
+        TextMeshProUGUI msgF1 = GameObject.Find(ruta + "MsgF1").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI msgF2 = GameObject.Find(ruta + "MsgF2").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI msgF3 = GameObject.Find(ruta + "MsgF3").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI msgF4 = GameObject.Find(ruta + "MsgF4").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI outlineMsgRes = GameObject.Find(ruta + "Mensaje").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI outlineBanderas = GameObject.Find(ruta + "Banderas").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI outlineBanMax = GameObject.Find(ruta + "MaxBanderas").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI outlineFallos = GameObject.Find(ruta + "Fallos").GetComponent<TextMeshProUGUI>();
+
+        Debug.Log("Esta vacio? " + (mensajeResultado == null));
 
         this.menu = GameObject.Find("Menu");
         this.ganador = GameObject.Find("Resultado");
@@ -48,6 +51,7 @@ public class MenuManager : MonoBehaviour
         if(Ganador())
         {
             
+            
             banderas.text = ValoresNivel.EXITOS + "";
             banderasMax.text = ValoresNivel.MAX_EXITOS + "";
             fallos.text = ValoresNivel.FALLOS + "";
@@ -55,28 +59,27 @@ public class MenuManager : MonoBehaviour
             if (ValoresNivel.MAX_FALLOS == 0)
             {
                 mensajeResultado.text = "No has completado el nivel. Suerte en la próxima";
-                msgF1.OutlineColor = ROJO;
-                msgF2.OutlineColor = ROJO;
-                msgF3.OutlineColor = ROJO;
-                msgF4.OutlineColor = ROJO;
-                outlineMsgRes.OutlineColor = ROJO;
-                outlineBanderas.OutlineColor = ROJO;
-                outlineBanMax.OutlineColor = ROJO;
-                outlineFallos.OutlineColor = ROJO;
+                outlineMsgRes.outlineColor = ROJO;
+                msgF1.outlineColor = ROJO;
+                msgF2.outlineColor = ROJO;
+                msgF3.outlineColor = ROJO;
+                msgF4.outlineColor = ROJO;     
+                outlineBanderas.outlineColor = ROJO;
+                outlineBanMax.outlineColor = ROJO;
+                outlineFallos.outlineColor = ROJO;
             }
             else
             {
                 mensajeResultado.text = "Enhorabuena has completado el nivel";
-                msgF1.OutlineColor = VERDE;
-                msgF2.OutlineColor = VERDE;
-                msgF3.OutlineColor = VERDE;
-                msgF4.OutlineColor = VERDE;
-                outlineMsgRes.OutlineColor = VERDE;
-                outlineBanderas.OutlineColor = VERDE;
-                outlineBanMax.OutlineColor = VERDE;
-                outlineFallos.OutlineColor = VERDE;
+                msgF1.outlineColor = VERDE;
+                msgF2.outlineColor = VERDE;
+                msgF3.outlineColor = VERDE;
+                msgF4.outlineColor = VERDE;
+                outlineMsgRes.outlineColor = VERDE;
+                outlineBanderas.outlineColor = VERDE;
+                outlineBanMax.outlineColor = VERDE;
+                outlineFallos.outlineColor = VERDE;
             }
-
             ganador.SetActive(true);
         }
         else
